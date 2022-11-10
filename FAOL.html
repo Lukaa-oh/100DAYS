@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>100 DAYS</title>
+<link rel="stylesheet" href="style/index.css">
+</head>
+<style>
+  .kk{
+    width: 170px;
+    height: 170px;
+    position:absolute;
+    top: 42%;
+    left: 45%;
+    transform-style: preserve-3d;
+    /* 添加动画效果 */
+    animation: rotate 10s linear infinite;
+    transform: rotateY(0) translateZ(300px);
+  }
+</style>
+<body>
+  <div id="app" class="text" :style="{opacity}">
+  <b>100 DAYS💞</b></div>
+  <!-- 修改文字 -->
+  <div class="kk"
+       style="text-align:center;
+line-height :170px;
+color: #7a0ad5;
+font-size: 32px;">
+    berber💗
+  </div>
+<canvas id="pinkboard">
+
+</canvas>
+<video id="v1" autoplay muted loop style="width: 100%">
+  <source  src="img/花瓣飘落.mp4">
+</video>
+<script src="js/vue.js"></script>
+<script src="js/index.js"></script>
+  </script>
+  <audio id="bgmusic" src="http://music.163.com/song/media/outer/url?id=1996135631.mp3" autoplay="autoplay" loop="loop" preload="auto" style="display: block; width: 3%; height:3%;"></audio>
+  <script type="text/javascript">
+      function toggleSound() {
+          var music = document.getElementById("bgmusic");
+          console.log(music);
+          console.log(music.paused);
+          if (music.paused) {
+              music.paused=false;
+              music.play();
+          }
+      }
+      setInterval("toggleSound()",1);
+  </script>
+</body>
+</html>
